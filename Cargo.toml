@@ -1,0 +1,13 @@
+[package]
+name = "hello-driver"
+version = "0.1.0"
+authors = ["Carl Hurd <carl@basilisklabs.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+winapi = { git = "https://github.com/Trantect/winapi-rs", branch = "feature/km", features = ["ntdef", "basetsd", "ndis", "wdm"] }
+
+[lib]
+crate-type = ["dylib"]
